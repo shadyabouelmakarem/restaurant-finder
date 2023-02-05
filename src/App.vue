@@ -20,5 +20,6 @@ import RestaurantDetails from "./components/RestaurantDetails.vue";
     "a a a a"
     "b c c c"
     "b c c c";
+  height: 100%;
 }
 </style>
