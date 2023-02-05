@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="page-layout">
+    <HeaderComponent />
+    <RestaurantList />
+    <RestaurantDetails />
+  </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import HeaderComponent from "./components/HeaderComponent.vue";
+import RestaurantList from "./components/RestaurantList.vue";
+import RestaurantDetails from "./components/RestaurantDetails.vue";
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.page-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "a a a a"
+    "b c c c"
+    "b c c c";
 }
 </style>
