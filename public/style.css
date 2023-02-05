@@ -1,0 +1,16 @@
+:root {
+  /* fonts */
+  --font-size-default: 16px;
+  --font-size-big: 24px;
+
+  /* colors */
+  --white: #fff;
+  --dark-gray: #282c34;
+  --light-gray: #d3d3d3;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: var(--global-font-size);
+}
