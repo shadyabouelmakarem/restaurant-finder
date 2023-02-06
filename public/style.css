@@ -1,5 +1,7 @@
 :root {
   /* fonts */
+  --font-size-tiny: 12px;
+  --font-size-small: 16px;
   --font-size-default: 20px;
   --font-size-big: 24px;
   --font-size-huge: 36px;
@@ -8,6 +10,7 @@
   --white: #fff;
   --dark-gray: #282c34;
   --light-gray: #d3d3d3;
+  --sky-blue: #61dafb;
 }
 html {
   width: 100%;
@@ -17,9 +20,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   font-family: Arial, sans-serif;
   font-size: var(--font-size-default);
+  color: var(--dark-gray);
 }
 #app {
   height: 100%;
