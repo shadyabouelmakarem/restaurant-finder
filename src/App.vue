@@ -1,14 +1,19 @@
 <template>
   <div class="page-layout">
     <HeaderComponent />
-    <RestaurantList />
-    <RestaurantDetails />
+    <RestaurantList
+      @selectRestaurant="(value) => (selectedRestaurant.value = value)"
+    />
+    <RestaurantInfo :restaurant="selectedRestaurant.value" />
   </div>
 </template>
 <script setup>
 import HeaderComponent from "./components/HeaderComponent.vue";
 import RestaurantList from "./components/RestaurantList.vue";
-import RestaurantDetails from "./components/RestaurantDetails.vue";
+import RestaurantInfo from "./components/RestaurantInfo.vue";
+import { reactive } from "@vue/reactivity";
+
+const selectedRestaurant = reactive({});
 </script>
 
 <style lang="scss" scoped>
