@@ -20,10 +20,9 @@ const selectedRestaurant = reactive({});
 .page-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-areas:
     "a a a a"
-    "b c c c"
     "b c c c";
   height: 100%;
 }

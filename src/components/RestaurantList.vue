@@ -1,5 +1,5 @@
 <template>
-  <div class="restaurant-list">
+  <div class="restaurant-list fade-in">
     <p>{{ restaurants.length }} Restaurants</p>
     <ul>
       <li
@@ -48,16 +48,29 @@ function selectRestaurant(restaurant: Restaurant) {
   border-right: 1px solid var(--dark-gray);
 
   p {
+    display: flex;
+    align-items: center;
     background: var(--light-gray);
     margin: 0;
-    padding: 25px 45px;
+    padding: 0 45px;
     font-weight: 600;
+    height: 75px;
   }
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    max-height: calc(100vh - 175px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-gray);
+    }
 
     li {
       padding: 25px 45px;
