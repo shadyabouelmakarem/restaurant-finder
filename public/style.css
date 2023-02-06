@@ -12,6 +12,8 @@
   --light-gray: #d3d3d3;
   --sky-blue: #61dafb;
 }
+
+/* basic layout setup */
 html {
   width: 100%;
   height: 100%;
@@ -28,4 +30,18 @@ body {
 #app {
   height: 100%;
   width: 100%;
+}
+
+/* animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
