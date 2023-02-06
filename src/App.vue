@@ -12,8 +12,14 @@ import HeaderComponent from "./components/HeaderComponent.vue";
 import RestaurantList from "./components/RestaurantList.vue";
 import RestaurantInfo from "./components/RestaurantInfo.vue";
 import { reactive } from "@vue/reactivity";
+import { onMounted } from "@vue/runtime-core";
+import { adjustAppTheme } from "@/helpers/appTheme";
 
 const selectedRestaurant = reactive({});
+
+onMounted(() => {
+  adjustAppTheme();
+});
 </script>
 
 <style lang="scss" scoped>

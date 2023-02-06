@@ -9,7 +9,7 @@ header {
   font-weight: bold;
   height: 100px;
   padding: 0 25px;
-  color: var(--white);
+  color: var(--base);
   background: var(--dark-gray);
   display: flex;
   align-items: center;

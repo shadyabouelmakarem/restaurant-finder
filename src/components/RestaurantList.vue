@@ -19,9 +19,9 @@
 </template>
 
 <script setup lang="ts">
-import { Restaurant } from "../interfaces";
+import { Restaurant } from "@/interfaces";
 import ServerResponse from "../../data.json";
-import { parseLocation } from "../helpers/location";
+import { parseLocation } from "@/helpers/location";
 import { reactive } from "@vue/reactivity";
 
 /* eslint-disable */

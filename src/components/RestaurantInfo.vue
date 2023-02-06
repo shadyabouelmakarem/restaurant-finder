@@ -11,13 +11,13 @@
         {{ restaurant.location.formatted_address }}
       </b>
 
-      <b class="phone">
+      <b class="phone" v-if="restaurant.phone">
         <img src="@/assets/phone-icon.svg" alt="phone-icon" />
         {{ restaurant.phone }}</b
       >
     </div>
     <img class="restaurant-image" :src="restaurant.photos[0]" />
-    <div class="reviews">
+    <div class="reviews" v-if="restaurant.reviews.length">
       <div class="title">Reviews</div>
       <ul>
         <li v-for="(review, index) in restaurant.reviews" :key="index">
@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-// import { ref } from "vue";
 import { Restaurant } from "../interfaces";
 /* eslint-disable */
 const props = defineProps<{

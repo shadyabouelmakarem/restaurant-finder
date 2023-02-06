@@ -25,3 +25,10 @@ export interface Review {
   text: string;
   rating: number;
 }
+
+export interface ThemeColors {
+  "--base": string;
+  "--dark-gray": string;
+  "--light-gray": string;
+  "--sky-blue": string;
+}

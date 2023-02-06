@@ -5,12 +5,6 @@
   --font-size-default: 20px;
   --font-size-big: 24px;
   --font-size-huge: 36px;
-
-  /* colors */
-  --white: #fff;
-  --dark-gray: #282c34;
-  --light-gray: #d3d3d3;
-  --sky-blue: #61dafb;
 }
 
 /* basic layout setup */
@@ -26,6 +20,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: var(--font-size-default);
   color: var(--dark-gray);
+  background: var(--base);
 }
 #app {
   height: 100%;
