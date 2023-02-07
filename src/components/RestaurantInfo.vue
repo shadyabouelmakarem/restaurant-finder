@@ -2,10 +2,8 @@
   <div ref="animationWrapper" class="info fade-in" v-if="restaurant?.id">
     <div class="details">
       <span class="name">{{ restaurant.name }}</span>
-      <b
-        >Rating:
-        <span class="normal-font-weight">{{ restaurant.rating }} </span></b
-      >
+      <b>Rating:
+        <span class="normal-font-weight">{{ restaurant.rating }} </span></b>
       <b class="address">
         <img src="@/assets/marker-icon.svg" alt="marker-icon" />
         {{ restaurant.location.formatted_address }}
@@ -13,18 +11,15 @@
 
       <b class="phone" v-if="restaurant.phone">
         <img src="@/assets/phone-icon.svg" alt="phone-icon" />
-        {{ restaurant.phone }}</b
-      >
+        {{ restaurant.phone }}</b>
     </div>
     <img class="restaurant-image" :src="restaurant.photos[0]" />
     <div class="reviews" v-if="restaurant.reviews.length">
       <div class="title">Reviews</div>
       <ul>
         <li v-for="(review, index) in restaurant.reviews" :key="index">
-          <b
-            >Rating:
-            <span class="normal-font-weight">{{ review.rating }}</span></b
-          >
+          <b>Rating:
+            <span class="normal-font-weight">{{ review.rating }}</span></b>
           <p>{{ review.text }}</p>
         </li>
       </ul>
@@ -37,11 +32,9 @@
 
 <script setup lang="ts">
 import { Restaurant } from "../interfaces";
-/* eslint-disable */
 const props = defineProps<{
   restaurant?: Restaurant;
 }>();
-/* eslint-enable */
 </script>
 
 <style lang="scss" scoped>
@@ -120,6 +113,7 @@ const props = defineProps<{
     font-weight: normal;
   }
 }
+
 .no-restaurant-selected {
   grid-area: c;
   display: flex;

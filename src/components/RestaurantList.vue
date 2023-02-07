@@ -2,12 +2,8 @@
   <div class="restaurant-list fade-in">
     <p>{{ restaurants.length }} Restaurants</p>
     <ul>
-      <li
-        v-for="restaurant of restaurants"
-        :key="restaurant.id"
-        :class="{ selected: selectedRestaurant.value?.id === restaurant.id }"
-        @click="selectRestaurant(restaurant)"
-      >
+      <li v-for="restaurant of restaurants" :key="restaurant.id"
+        :class="{ selected: selectedRestaurant.id === restaurant.id }" @click="selectRestaurant(restaurant)">
         <div>{{ restaurant.name }}</div>
         <div class="restaurant-address">
           <img src="@/assets/marker-icon.svg" alt="marker-icon" />
@@ -22,19 +18,17 @@
 import { Restaurant } from "@/interfaces";
 import ServerResponse from "../../data.json";
 import { parseLocation } from "@/helpers/location";
-import { reactive } from "@vue/reactivity";
+import { ref } from "@vue/reactivity";
 
-/* eslint-disable */
 const emit = defineEmits<{
   (event: "selectRestaurant", restaurant: Restaurant): void;
 }>();
-/* eslint-enable */
 
 const restaurants: Restaurant[] = ServerResponse.data.search.business;
-const selectedRestaurant = reactive({});
+const selectedRestaurant = ref({} as Restaurant);
 
 function selectRestaurant(restaurant: Restaurant) {
-  this.selectedRestaurant.value = restaurant;
+  selectedRestaurant.value = restaurant;
   /* for the simplicity of the task I'm using emmiters.
     for real project we would mostly go with state management approach (ex: Vuex)
     or use a pup-supp pattern depending on the use case */

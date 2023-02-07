@@ -12,13 +12,9 @@ export interface Restaurant {
 
 export interface Location {
   address1: string;
-  city: City;
+  city: string;
   postal_code: string;
   formatted_address: string;
-}
-
-export enum City {
-  Hamburg = "Hamburg",
 }
 
 export interface Review {
