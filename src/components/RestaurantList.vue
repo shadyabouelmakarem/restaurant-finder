@@ -6,7 +6,7 @@
         :class="{ selected: selectedRestaurant.id === restaurant.id }" @click="selectRestaurant(restaurant)">
         <div>{{ restaurant.name }}</div>
         <div class="restaurant-address">
-          <img src="@/assets/marker-icon.svg" alt="marker-icon" />
+          <img src="@/assets/marker-icon.svg" alt="marker-icon" data-test="@/assets/marker-icon.svg" />
           {{ parseLocation(restaurant.location) }}
         </div>
       </li>
