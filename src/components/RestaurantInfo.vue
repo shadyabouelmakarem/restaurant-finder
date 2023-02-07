@@ -5,15 +5,16 @@
       <b>Rating:
         <span class="normal-font-weight">{{ restaurant.rating }} </span></b>
       <b class="address">
-        <img src="@/assets/marker-icon.svg" alt="marker-icon" />
+        <img src="@/assets/marker-icon.svg" alt="marker-icon" data-test="@/assets/marker-icon.svg" />
         {{ restaurant.location.formatted_address }}
       </b>
 
       <b class="phone" v-if="restaurant.phone">
-        <img src="@/assets/phone-icon.svg" alt="phone-icon" />
+        <img src="@/assets/phone-icon.svg" alt="phone-icon" data-test="@/assets/phone-icon.svg" />
         {{ restaurant.phone }}</b>
     </div>
-    <img class="restaurant-image" :src="restaurant.photos[0]" />
+    <img class="restaurant-image" :src="restaurant.photos[0]" alt="restaurant-photo"
+      :data-test="restaurant.photos[0]" />
     <div class="reviews" v-if="restaurant.reviews.length">
       <div class="title">Reviews</div>
       <ul>
