@@ -1,24 +1,28 @@
 # restaurant-finder
 
-## Project setup
-```
-npm install
-```
+## About the project
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A Vue.Js single page that shows a list of restaurants in a navigation and The details of a restaurant are displayed by clicking on an entry in the navigation.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+The UI is displayed in light/dark depending on the user's
+preferred system settings.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Setup instructions
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Install npm packages
+
+   ```bash
+   npm i
+   ```
+
+2. Run the app
+
+   ```bash
+   npm run serve
+   ```
+
+## Testing
+
+```bash
+npm run test
+```
